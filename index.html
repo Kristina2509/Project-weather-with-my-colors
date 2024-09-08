@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.6.7/dist/axios.min.js"></script>
+    <title>My weather application</title>
+  </head>
+
+  <body>
+    <div class="box">
+      <header>
+        <form id="search-form">
+          <input
+            class="enter-city"
+            type="search"
+            placeholder="Enter a city.."
+            id="search-input"
+            required
+          />
+          <input type="submit" value="Search" class="search" />
+        </form>
+      </header>
+      <hr size="1px" width="100%" color="blueviolet" />
+      <main>
+        <div class="current-weather">
+          <div class="city-and-more">
+            <h1 class="current-city" id="current-city">Paris</h1>
+            <p>
+              <span id="current-date"></span>, moderate rain <br />
+              Humidity: <strong>87%</strong>, Wind: <strong>7.2km/h</strong>
+            </p>
+          </div>
+          <div class="current-temperature">
+            <span class="sun">☀️</span>
+            <span class="current-temperature-value">14</span>
+            <span class="current-temperature-unit">°C</span>
+          </div>
+        </div>
+      </main>
+      <hr size="1px" width="100%" color="blueviolet" />
+      <footer>
+        <p class="about">
+          This project was coded by
+          <a
+            href="https://www.linkedin.com/in/крістіна-тимошенко-087427185/"
+            target="_blank"
+            >Kristina Tymoshenko</a
+          >
+          <br />
+          and is <a href="#" target="_blank"> on GitHub</a> and
+          <a href="#" target="_blank">hosted on Netlify</a>
+        </p>
+      </footer>
+    </div>
+  </body>
+
+  <script src="index.js"></script>
+</html>
