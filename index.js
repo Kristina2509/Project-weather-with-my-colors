@@ -1,8 +1,7 @@
 function search(event) {
     event.preventDefault();
     let searchInputElement = document.querySelector("#search-input");
-    let cityElement = document.querySelector("#current-city");
-    cityElement.innerHTML = searchInputElement.value;
+   
     getCity(searchInputElement.value);
   }
   
@@ -48,8 +47,25 @@ function search(event) {
   currentDateELement.innerHTML = formatDate(currentDate);
   
   function displayTemp(response) {
+
+    let cityElement = document.querySelector("#current-city");
+    cityElement.innerHTML = response.data.city;
+
     let sh = Math.round(response.data.temperature.current);
     console.log(sh);
     let curTemp = document.querySelector(".current-temperature-value");
     curTemp.innerHTML = `${sh}`;
+
+    let descriptionElement = document.querySelector("#description")
+    descriptionElement.innerHTML = response.data.condition.description;
+
+    let humidityElement = document.querySelector("#humidity")
+    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+
+    let wind = document.querySelector("#wind-speed")
+    wind.innerHTML = `${response.data.wind.speed}km/h`;
+
+    let date = new Date(response.data.time * 1000);
+    currentDateELement.innerHTML = formatDate(date);
+
   }
