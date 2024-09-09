@@ -41,27 +41,24 @@ body {
   }
   
   .sun {
-    font-size: 55px;
+    /* font-size: 55px;
     margin-right: 10px;
     position: relative;
-    top: -16px;
+    top: -16px; */
+    width: 88px;
+    height: 88px;
   }
   
   .current-temperature-value {
-    font-size: 80px;
+    font-size: 88px;
     font-weight: bold;
     font-family: "Roboto", sans-serif;
   }
   
-  .current-temperature-unit {
-    font-size: 28px;
-    position: relative;
-    top: -38px;
-  }
   
   .current-city {
     font-size: 40px;
-    font-weight: 900;
+    font-weight: 900px;
     font-family: "Roboto", sans-serif;
   }
   
@@ -73,8 +70,16 @@ body {
   }
   
   .current-temperature {
-    position: relative;
-    top: 13px;
+    display: flex;
+    /* position: relative;
+    top: 13px; */
+    border: 2px solid blue ;
+    margin-top: 11px;
+  }
+
+  .current-temperature-unit {
+    margin-top: 11px;
+    font-size: 28px;
   }
   
   p {

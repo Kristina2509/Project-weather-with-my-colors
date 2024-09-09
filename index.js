@@ -68,4 +68,9 @@ function search(event) {
     let date = new Date(response.data.time * 1000);
     currentDateELement.innerHTML = formatDate(date);
 
+    let icon = document.querySelector("#icon")
+    icon.innerHTML = `<img class="sun" src="${response.data.condition.icon_url}" />`;
+              
+
+    
   }
