@@ -110,5 +110,5 @@ function displayTemp(response) {
     getForecast(response.data.city);
 }
 
-getCity("Paris");
-getForecast("Paris");
+// getCity("Paris");
+// getForecast("Paris");
