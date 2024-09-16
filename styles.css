@@ -115,8 +115,10 @@ body {
   }
 
   .forecast-icon {
-    text-align: center;
-    font-size: 38px;
+    height: 75px;
+    width: 75px;
+    display: block;
+    margin: 0 auto;
   }
 
   .forecast-temprs {
