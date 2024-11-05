@@ -127,10 +127,11 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px;
+    
   }
 
   .forecast-tempr {
-    padding: 0 10px;
+    padding: 0 6px;
   }
 
   .weather-forecast {
