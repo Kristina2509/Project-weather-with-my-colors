@@ -14,7 +14,7 @@ function getCity(city) {
 function getForecast(city) {
     let apiKey = "30d72278aa59oa6afdf4349bbat686b9";
     let apiUrl = `https://api.shecodes.io/weather/v1/forecast?query=${city}&key=${apiKey}&units=metric`;
-    axios(apiUrl).then(displayForecast);
+    axios.get(apiUrl).then(displayForecast);
 };
 
 function formatDate(date) {
@@ -106,7 +106,7 @@ function displayTemp(response) {
     cityElement.innerHTML = response.data.city;
 
     let sh = Math.round(response.data.temperature.current);
-    console.log(sh);
+    console.log(sh);// "sh" meaning that it actualy fresh value
     let curTemp = document.querySelector(".current-temperature-value");
     curTemp.innerHTML = `${sh}`;
 
